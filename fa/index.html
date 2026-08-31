@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>برهم ر.زاده</title>
+    <link
+      rel="shortcut icon"
+      href="assets/icons/Untitled_design_3_-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"
+    />
+    <style>
+      :root {
+        --main-color: #2c3e50;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Montserrat", "Segoe UI", Tahoma, sans-serif;
+      }
+
+      .navbar {
+        background-color: #ffff;
+        min-height: 100px;
+        border-bottom: 5px solid var(--main-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 40px;
+      }
+
+      .nav-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .nav-option {
+        padding: 0 15px;
+        font-size: x-large;
+      }
+
+      .nav-option a {
+        text-decoration: none;
+        color: var(--main-color);
+        font-weight: bold;
+        transition: 0.3s all;
+        position: relative;
+      }
+
+      .nav-option a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background: var(--main-color);
+        transition: width 0.3s;
+      }
+
+      .nav-option a:hover::after {
+        width: 100%;
+      }
+
+      .nav-option a:hover {
+        text-decoration: none;
+      }
+
+      .nav-brand-div {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar-brand img {
+        max-height: 80px;
+        width: auto;
+      }
+
+      .intro {
+        width: 100%;
+        min-height: 92vh;
+        background-image: url("../../assets/images/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .intro-container {
+        display: block;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 40px 50px 70px;
+        border-radius: 20px;
+        max-width: 90%;
+        backdrop-filter: blur(5px);
+      }
+
+      .intro .profile-image {
+        width: 250px;
+        border-radius: 50%;
+        transition: transform 0.3s;
+        border: 4px solid var(--main-color);
+      }
+
+      .intro .profile-image:hover {
+        transform: scale(1.05);
+      }
+
+      .intro .intro-title {
+        font-size: 70px;
+        color: var(--main-color);
+        margin-top: 15px;
+      }
+
+      .intro .intro-desc {
+        font-size: 28px;
+        color: #555;
+        margin: 10px 0 20px;
+      }
+
+      header {
+        border-bottom: 5px solid var(--main-color);
+      }
+
+      .bold {
+        font-weight: bold;
+      }
+
+      .main-color {
+        color: var(--main-color);
+      }
+
+      .underline {
+        border-bottom: 3px solid darkgray;
+        padding-bottom: 3px;
+      }
+
+      .about {
+        width: 100%;
+        text-align: center;
+        padding: 60px 40px 80px;
+        border-bottom: 5px solid var(--main-color);
+      }
+
+      .about-title {
+        font-size: 60px;
+        margin-bottom: 15px;
+        color: var(--main-color);
+      }
+
+      .about-desc {
+        font-size: 32px;
+        margin-bottom: 30px;
+        line-height: 1.5;
+      }
+
+      .about-container {
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+      }
+
+      .about-more-container {
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+      }
+
+      .about-more-desc {
+        max-width: 1000px;
+        font-size: 22px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 50px;
+      }
+
+      .about-more-info {
+        background-color: #f3f3f3;
+        max-width: 1000px;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-radius: 20px;
+        margin-bottom: 50px;
+        gap: 10px;
+      }
+
+      .about-info {
+        width: 45%;
+        padding: 20px;
+        text-align: right;
+        min-width: 250px;
+      }
+
+      .about-info-title {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .about-info-desc {
+        font-size: 20px;
+        font-weight: 450;
+      }
+
+      .about-info-link {
+        color: var(--main-color);
+        text-decoration: none;
+      }
+
+      .about-info-link:hover {
+        text-decoration: underline;
+      }
+
+      .btn {
+        padding: 18px 40px;
+        background: var(--main-color);
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: 0.3s all;
+        border: 3px solid var(--main-color);
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .btn:hover {
+        background: #ffff;
+        border: 3px solid var(--main-color);
+        color: var(--main-color);
+        transform: translateY(-3px);
+      }
+
+      .btn-2 {
+        background-color: #ffffff;
+        padding: 18px 40px;
+        margin: 5px;
+        font-size: 24px;
+        border-radius: 50px;
+        text-decoration: none;
+        color: var(--main-color);
+        border: 3px solid var(--main-color);
+        font-weight: 500;
+        transition: 0.3s all;
+        display: inline-block;
+      }
+
+      .btn-2:hover {
+        background: var(--main-color);
+        color: white;
+        border-color: #1a2a6c;
+        transform: translateY(-3px);
+      }
+
+      .skills {
+        width: 100%;
+        text-align: center;
+        padding: 60px 40px 80px;
+        border-bottom: 5px solid var(--main-color);
+      }
+
+      .skills-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .skills-title {
+        font-size: 60px;
+        margin: 15px 0;
+        color: var(--main-color);
+      }
+
+      .skills-desc {
+        font-size: 24px;
+        font-weight: 450;
+        margin-bottom: 25px;
+        color: #555;
+      }
+
+      .skills-container-sec {
+        max-width: 900px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #f3f3f3;
+        font-size: 24px;
+        padding: 30px;
+        border-radius: 20px;
+        gap: 15px;
+      }
+
+      .skill-item {
+        width: calc(50% - 15px);
+        min-width: 280px;
+        display: flex;
+        align-items: center;
+        background-color: #ffff;
+        padding: 18px 20px;
+        border-radius: 15px;
+        border-right: 8px solid var(--main-color);
+        justify-content: space-between;
+      }
+
+      .skill-item i {
+        margin-left: 12px;
+        font-size: 28px;
+      }
+
+      .skill-item .skill-item {
+        border-right: none;
+        padding: 0;
+        width: auto;
+        min-width: auto;
+      }
+
+      .skill-title {
+        font-weight: 500;
+        font-size: 20px;
+      }
+
+      .skill-status {
+        font-size: 18px;
+        text-align: left;
+      }
+
+      .skill-learning {
+        margin-top: 40px;
+      }
+
+      .skill-learning-title {
+        background: #a3cdff;
+        text-align: center;
+        display: inline-block;
+        padding: 20px 40px;
+        font-size: 28px;
+        border-radius: 20px;
+        outline: 5px dashed var(--main-color);
+      }
+
+      .success {
+        display: inline-block;
+        padding: 5px 15px;
+        background: lightgreen;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+
+      .almost {
+        display: inline-block;
+        padding: 5px 15px;
+        background: lightgray;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+
+      .fa-html5 {
+        color: orangered;
+      }
+
+      .fa-css3 {
+        color: dodgerblue;
+      }
+
+      .fa-code {
+        color: #f7df1e;
+      }
+
+      .fa-laptop-code {
+        color: blueviolet;
+      }
+
+      .fa-git-alt {
+        color: orangered;
+      }
+
+      .fa-bootstrap {
+        color: #7952b3;
+      }
+
+      .portfolio {
+        text-align: center;
+        padding: 60px 40px 80px;
+        border-bottom: 5px solid var(--main-color);
+      }
+
+      .portfolio-title {
+        font-size: 60px;
+        margin: 20px 0 15px;
+        color: var(--main-color);
+      }
+
+      .portfolio-desc {
+        font-size: 24px;
+        font-weight: 450;
+        margin-bottom: 25px;
+        color: #555;
+      }
+
+      .portfolio-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .portfolio-box-container {
+        max-width: 900px;
+        width: 100%;
+        background-color: #f3f3f3;
+        text-align: center;
+        border-radius: 30px;
+        padding: 50px 30px 70px;
+        outline: 5px dashed var(--main-color);
+      }
+
+      .portfolio-box-icon {
+        font-size: 80px;
+        color: var(--main-color);
+      }
+
+      .portfolio-box-title {
+        font-size: 40px;
+        color: var(--main-color);
+        margin: 20px 0;
+      }
+
+      .portfolio-box-desc {
+        font-size: 24px;
+        line-height: 1.7;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .contact {
+        width: 100%;
+        text-align: center;
+        padding: 60px 40px 80px;
+        border-bottom: 5px solid var(--main-color);
+      }
+
+      .contact-title {
+        font-size: 60px;
+        margin: 20px 0 10px;
+        color: var(--main-color);
+      }
+
+      .contact-desc {
+        font-size: 24px;
+        margin-bottom: 40px;
+        color: #555;
+      }
+
+      .contact-info {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #f3f3f3;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .contact-items-1 {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .contact-item {
+        width: calc(50% - 15px);
+        min-width: 280px;
+        padding: 18px 20px;
+        background-color: #ffff;
+        border-radius: 15px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        border-right: 8px solid var(--main-color);
+        text-align: right;
+      }
+
+      .contact-item i {
+        font-size: 30px;
+        margin-left: 15px;
+        min-width: 40px;
+      }
+
+      .contact-item div {
+        width: 100%;
+      }
+
+      .contact-item-title {
+        font-weight: 600;
+        font-size: 14px;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .contact-item-content {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .contact-item-content a {
+        color: var(--main-color);
+        text-decoration: none;
+      }
+
+      .contact-item-content a:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        background-color: var(--main-color);
+        padding: 50px 20px;
+        text-align: center;
+      }
+
+      .profile-logo img {
+        width: 180px;
+        border-radius: 50%;
+        border: 4px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .footer-go2top {
+        color: white;
+        font-size: 32px;
+        margin: 15px 0;
+        font-weight: 450;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .footer-go2top:hover {
+        text-decoration: underline;
+      }
+
+      .footer-rights {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      @media (max-width: 1200px) {
+        .about-title,
+        .skills-title,
+        .portfolio-title,
+        .contact-title {
+          font-size: 50px;
+        }
+
+        .about-desc {
+          font-size: 28px;
+        }
+
+        .intro .intro-title {
+          font-size: 55px;
+        }
+
+        .intro .intro-desc {
+          font-size: 24px;
+        }
+
+        .portfolio-box-desc {
+          font-size: 22px;
+        }
+
+        .portfolio-box-title {
+          font-size: 34px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .navbar {
+          padding: 0 20px;
+          min-height: 80px;
+        }
+
+        .nav-option {
+          font-size: 18px;
+          padding: 0 10px;
+        }
+
+        .navbar-brand img {
+          max-height: 60px;
+        }
+
+        .intro .profile-image {
+          width: 200px;
+        }
+
+        .intro .intro-title {
+          font-size: 45px;
+        }
+
+        .intro .intro-desc {
+          font-size: 22px;
+        }
+
+        .about-title,
+        .skills-title,
+        .portfolio-title,
+        .contact-title {
+          font-size: 42px;
+        }
+
+        .about-desc {
+          font-size: 24px;
+        }
+
+        .about-more-desc {
+          font-size: 20px;
+        }
+
+        .about-info {
+          width: 100%;
+          min-width: auto;
+        }
+
+        .about-more-info {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .btn,
+        .btn-2 {
+          font-size: 20px;
+          padding: 14px 30px;
+        }
+
+        .skills-container-sec {
+          padding: 20px;
+        }
+
+        .skill-item {
+          width: 100%;
+          min-width: auto;
+          font-size: 20px;
+        }
+
+        .skill-status {
+          font-size: 16px;
+        }
+
+        .skill-learning-title {
+          font-size: 24px;
+          padding: 15px 30px;
+        }
+
+        .portfolio-box-container {
+          padding: 30px 20px 50px;
+        }
+
+        .portfolio-box-icon {
+          font-size: 60px;
+        }
+
+        .portfolio-box-title {
+          font-size: 30px;
+        }
+
+        .portfolio-box-desc {
+          font-size: 20px;
+        }
+
+        .contact-item {
+          width: 100%;
+          min-width: auto;
+          font-size: 18px;
+        }
+
+        .contact-info {
+          padding: 15px;
+        }
+
+        .footer-go2top {
+          font-size: 28px;
+        }
+
+        .profile-logo img {
+          width: 150px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .navbar {
+          flex-direction: column;
+          padding: 15px 20px;
+          min-height: auto;
+          gap: 10px;
+        }
+
+        .nav-controls {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 5px;
+        }
+
+        .nav-option {
+          font-size: 16px;
+          padding: 0 12px;
+        }
+
+        .nav-option a::after {
+          display: none;
+        }
+
+        .intro-container {
+          padding: 30px 20px 50px;
+        }
+
+        .intro .profile-image {
+          width: 160px;
+        }
+
+        .intro .intro-title {
+          font-size: 36px;
+        }
+
+        .intro .intro-desc {
+          font-size: 18px;
+        }
+
+        .about {
+          padding: 40px 20px 60px;
+        }
+
+        .about-title,
+        .skills-title,
+        .portfolio-title,
+        .contact-title {
+          font-size: 36px;
+        }
+
+        .about-desc {
+          font-size: 20px;
+        }
+
+        .about-more-desc {
+          font-size: 18px;
+        }
+
+        .about-info-title {
+          font-size: 20px;
+        }
+
+        .about-info-desc {
+          font-size: 17px;
+        }
+
+        .btn,
+        .btn-2 {
+          font-size: 18px;
+          padding: 12px 25px;
+          display: block;
+          width: 100%;
+          max-width: 300px;
+          margin: 8px auto;
+        }
+
+        .skills {
+          padding: 40px 20px 60px;
+        }
+
+        .skills-desc {
+          font-size: 20px;
+        }
+
+        .skills-container-sec {
+          padding: 15px;
+          font-size: 20px;
+        }
+
+        .skill-item {
+          padding: 14px 16px;
+          font-size: 18px;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+
+        .skill-item i {
+          font-size: 22px;
+        }
+
+        .skill-title {
+          font-size: 17px;
+        }
+
+        .skill-status {
+          font-size: 14px;
+          width: 100%;
+          text-align: right;
+          padding-right: 40px;
+        }
+
+        .skill-learning-title {
+          font-size: 20px;
+          padding: 12px 20px;
+        }
+
+        .portfolio {
+          padding: 40px 20px 60px;
+        }
+
+        .portfolio-box-container {
+          padding: 25px 15px 40px;
+        }
+
+        .portfolio-box-icon {
+          font-size: 50px;
+        }
+
+        .portfolio-box-title {
+          font-size: 26px;
+        }
+
+        .portfolio-box-desc {
+          font-size: 18px;
+        }
+
+        .contact {
+          padding: 40px 20px 60px;
+        }
+
+        .contact-desc {
+          font-size: 20px;
+        }
+
+        .contact-item {
+          font-size: 16px;
+          padding: 14px 16px;
+          border-right-width: 6px;
+        }
+
+        .contact-item i {
+          font-size: 24px;
+          margin-left: 12px;
+          min-width: 30px;
+        }
+
+        .contact-item-content {
+          font-size: 16px;
+        }
+
+        .footer {
+          padding: 30px 15px;
+        }
+
+        .profile-logo img {
+          width: 120px;
+        }
+
+        .footer-go2top {
+          font-size: 22px;
+          margin: 10px 0;
+        }
+
+        .footer-rights {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .navbar {
+          padding: 10px 15px;
+        }
+
+        .nav-option {
+          font-size: 14px;
+          padding: 0 8px;
+        }
+
+        .navbar-brand img {
+          max-height: 50px;
+        }
+
+        .intro-container {
+          padding: 20px 15px 35px;
+        }
+
+        .intro .profile-image {
+          width: 130px;
+        }
+
+        .intro .intro-title {
+          font-size: 28px;
+        }
+
+        .intro .intro-desc {
+          font-size: 16px;
+        }
+
+        .about-title,
+        .skills-title,
+        .portfolio-title,
+        .contact-title {
+          font-size: 30px;
+        }
+
+        .about-desc {
+          font-size: 18px;
+        }
+
+        .about-more-desc {
+          font-size: 16px;
+        }
+
+        .about-info {
+          padding: 12px;
+        }
+
+        .about-info-title {
+          font-size: 18px;
+        }
+
+        .about-info-desc {
+          font-size: 15px;
+        }
+
+        .btn,
+        .btn-2 {
+          font-size: 16px;
+          padding: 10px 20px;
+          max-width: 100%;
+        }
+
+        .skill-item {
+          padding: 12px 14px;
+          font-size: 16px;
+        }
+
+        .skill-item i {
+          font-size: 20px;
+          margin-left: 10px;
+        }
+
+        .skill-title {
+          font-size: 15px;
+        }
+
+        .skill-status {
+          font-size: 13px;
+          padding-right: 30px;
+        }
+
+        .skill-learning-title {
+          font-size: 17px;
+          padding: 10px 16px;
+          outline-width: 3px;
+        }
+
+        .portfolio-box-icon {
+          font-size: 40px;
+        }
+
+        .portfolio-box-title {
+          font-size: 22px;
+        }
+
+        .portfolio-box-desc {
+          font-size: 16px;
+        }
+
+        .contact-item {
+          font-size: 14px;
+          padding: 12px 14px;
+          flex-wrap: wrap;
+        }
+
+        .contact-item i {
+          font-size: 20px;
+          margin-left: 10px;
+          min-width: 25px;
+        }
+
+        .contact-item-content {
+          font-size: 14px;
+        }
+
+        .contact-item-title {
+          font-size: 12px;
+        }
+
+        .profile-logo img {
+          width: 100px;
+        }
+
+        .footer-go2top {
+          font-size: 18px;
+        }
+
+        .footer-rights {
+          font-size: 14px;
+        }
+
+        .portfolio-box-container {
+          padding: 20px 12px 30px;
+          outline-width: 3px;
+        }
+
+        .skills-container-sec {
+          padding: 10px;
+          gap: 10px;
+        }
+
+        .contact-info {
+          padding: 10px;
+        }
+
+        .contact-items-1 {
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-brand-div">
+          <span class="navbar-brand">
+            <img
+              src="assets/icons/Untitled_design-removebg-preview.png"
+              alt="لوگو"
+            />
+          </span>
+        </div>
+        <ul class="nav-controls">
+          <li class="nav-option"><a href="#about">درباره من</a></li>
+          <li class="nav-option"><a href="#skills">مهارت‌ها</a></li>
+          <li class="nav-option"><a href="#portfolio">نمونه کارها</a></li>
+          <li class="nav-option"><a href="#contact">تماس با من</a></li>
+        </ul>
+      </nav>
+
+      <div class="intro">
+        <div class="intro-container">
+          <a href="https://github.com/Barham2011">
+            <img
+              class="profile-image"
+              src="assets/icons/profile-image.png"
+              alt="تصویر پروفایل"
+            />
+          </a>
+          <h1 class="intro-title">من برهم ر.زاده هستم</h1>
+          <p class="intro-desc">دانشجوی توسعه Front-end</p>
+          <br />
+          <a href="#" class="btn">دانلود رزومه من</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="about" id="about">
+        <h2 class="about-title">درباره من</h2>
+        <p class="about-desc">
+          سلام! من
+          <span class="bold main-color underline">برهم ر.زاده</span> هستم، یک
+          <span class="bold main-color underline">توسعه‌دهنده Front-end</span>
+          <span class="bold main-color">دانشجو</span> مقیم ایران.
+        </p>
+        <div class="about-container">
+          <p class="about-more-desc">
+            من در حال حاضر در یک سفر هیجان‌انگیز برای تبدیل شدن به یک
+            توسعه‌دهنده حرفه‌ای وب هستم. من عاشق ساختن وب‌سایت‌های زیبا، پاسخگو
+            و کاربرپسند هستم که تفاوت ایجاد می‌کنند. هدف من تبدیل ایده‌ها به
+            واقعیت از طریق کد تمیز و طراحی مدبرانه است.
+          </p>
+        </div>
+        <div class="about-more-container">
+          <div class="about-more-info">
+            <div class="about-info">
+              <h3 class="about-info-title">
+                <i class="fa fa-map-marker" style="color: red"></i> موقعیت
+              </h3>
+              <p class="about-info-desc">ایران / کردستان / سقز</p>
+            </div>
+            <div class="about-info">
+              <h3 class="about-info-title">🎯 تمرکز</h3>
+              <p class="about-info-desc">توسعه حرفه‌ای Front-end</p>
+            </div>
+            <div class="about-info">
+              <h3 class="about-info-title">
+                <i class="fas fa-envelope" style="color: silver"></i> ایمیل
+              </h3>
+              <p class="about-info-desc">
+                <a href="mailto:barham.rahman@proton.me" class="about-info-link"
+                  >barham.rahman@proton.me</a
+                >
+              </p>
+            </div>
+            <div class="about-info">
+              <h3 class="about-info-title">
+                <i class="fab fa-git-alt" style="color: orangered"></i> گیت‌هاب
+              </h3>
+              <p class="about-info-desc">
+                <a href="https://github.com/Barham2011" class="about-info-link"
+                  >github.com/Barham2011</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">مشاهده کارهای من</a>
+        <a href="#" class="btn-2">ارتباط با من</a>
+      </section>
+
+      <section class="skills" id="skills">
+        <h2 class="skills-title">مهارت‌های من</h2>
+        <p class="skills-desc">
+          من تقریباً ۴ سال است که برنامه‌نویسی می‌خوانم. از صفر شروع کردم و الان
+          در حال یادگیری ری‌اکت هستم.
+        </p>
+        <div class="skills-container">
+          <div class="skills-container-sec">
+            <div class="skill-item">
+              <span
+                ><i class="fab fa-html5"></i>
+                <span class="skill-title">HTML5</span></span
+              >
+              <span class="skill-status"
+                ><span class="success">مسلط</span></span
+              >
+            </div>
+            <div class="skill-item">
+              <span
+                ><i class="fab fa-css3"></i>
+                <span class="skill-title">CSS3</span></span
+              >
+              <span class="skill-status"
+                ><span class="success">تقریباً مسلط</span></span
+              >
+            </div>
+            <div class="skill-item">
+              <span
+                ><i class="fas fa-code"></i>
+                <span class="skill-title">جاوااسکریپت</span></span
+              >
+              <span class="skill-status"
+                ><span class="success">مسلط</span></span
+              >
+            </div>
+            <div class="skill-item">
+              <span
+                ><i class="fab fa-git-alt"></i>
+                <span class="skill-title">گیت و گیت‌هاب</span></span
+              >
+              <span class="skill-status"
+                ><span class="success">تقریباً مسلط</span></span
+              >
+            </div>
+            <div class="skill-item">
+              <span
+                ><i class="fab fa-bootstrap"></i>
+                <span class="skill-title">بوت‌استرپ</span></span
+              >
+              <span class="skill-status"><span class="almost">ماهر</span></span>
+            </div>
+            <div class="skill-item">
+              <span
+                ><i class="fas fa-laptop-code"></i>
+                <span class="skill-title">طراحی پاسخگو</span></span
+              >
+              <span class="skill-status"><span class="almost">ماهر</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-learning">
+          <p class="skill-learning-title">
+            در حال یادگیری <i class="fab fa-react"></i>
+            <span class="bold">ری‌اکت</span>
+          </p>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <h2 class="portfolio-title">نمونه کارهای من</h2>
+        <p class="portfolio-desc">کارهای من را در گیت‌هاب ببینید</p>
+        <div class="portfolio-box">
+          <div class="portfolio-box-container">
+            <i class="fas fa-folder-open portfolio-box-icon"></i>
+            <h3 class="portfolio-box-title">مشاهده پروژه‌های من</h3>
+            <p class="portfolio-box-desc">
+              من چندین پروژه ساخته‌ام که مهارت‌های من را در
+              <span class="bold">HTML</span>، <span class="bold">CSS</span>،
+              <span class="bold">جاوااسکریپت</span> و
+              <span class="bold">بوت‌استرپ</span> نشان می‌دهد. تمام کارهای من در
+              گیت‌هاب موجود است.
+            </p>
+            <br />
+            <div>
+              <a href="#" class="btn"
+                ><i class="fab fa-github"></i> بازدید از گیت‌هاب من</a
+              >
+              <a href="#" class="btn-2"
+                ><i class="fas fa-code-branch"></i> مشاهده مخزن‌ها</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h2 class="contact-title">تماس با من</h2>
+        <p class="contact-desc">
+          بیایید ارتباط بگیریم! هر زمانی با من تماس بگیرید
+        </p>
+        <div class="contact-info">
+          <div class="contact-items-1">
+            <div class="contact-item">
+              <i class="fas fa-envelope" style="color: lightskyblue"></i>
+              <div>
+                <p class="contact-item-title">ایمیل</p>
+                <p class="contact-item-content">
+                  <a
+                    href="mailto:barham.rahman@proton.me"
+                    class="about-info-link"
+                    >barham.rahman@proton.me</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker" style="color: red"></i>
+              <div>
+                <p class="contact-item-title">موقعیت</p>
+                <p class="contact-item-content">ایران / کردستان / سقز</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone" style="color: gray"></i>
+              <div>
+                <p class="contact-item-title">تلفن</p>
+                <p class="contact-item-content">۰۹۱۸۴۵۳۴۵۸۴</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fab fa-github"></i>
+              <div>
+                <p class="contact-item-title">گیت‌هاب</p>
+                <p class="contact-item-content">
+                  <a
+                    href="https://github.com/Barham2011"
+                    class="about-info-link"
+                    >github.com/Barham2011</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="profile-logo"
+        ><img src="assets/icons/profile-image.png" alt="لوگوی برهم"
+      /></span>
+      <a href="#" class="footer-go2top"
+        >بازگشت به بالا <i class="fa fa-arrow-up"></i
+      ></a>
+      <p class="footer-rights">
+        © ۲۰۲۶ ساخته شده توسط برهم ر.زاده. تمام حقوق محفوظ است.
+      </p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/YOUR-KIT-CODE.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
