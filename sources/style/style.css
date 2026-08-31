@@ -74,7 +74,7 @@ body {
     text-align: center;
     margin-top: -50px;
     background: rgb(255 255 255 / 0.8);
-    padding: 40px 20px;
+    padding: 40px 20px 70px 20px;
     border-radius: 20px;
 }
 
@@ -391,4 +391,68 @@ fa-code {
     font-size: 40px;
     padding: 0px 20px 10px 20px;
     margin: 10px 0 10px 0;
+}
+
+/* ===================== Contact Section ===================== */
+
+.contact {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    padding-bottom: 100px;
+    border-bottom: 5px solid var(--main-color);
+}
+
+.contact-title {
+    font-size: 80px;
+    margin: 20px 0 10px 0;
+    color: var(--main-color);
+}
+
+.contact-desc {
+    font-size: xx-large;
+    margin-bottom: 60px;
+}
+
+.contact-info {
+    width: 60%;
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.contact-items-1 {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    width: 45%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #ffff;
+    border-radius: 20px;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    border-right: 10px solid var(--main-color);
+}
+
+.contact-item-title,
+.contact-item-desc,
+.contact-item i {
+    padding: 10px;
+}
+
+.contact-item i {
+    margin-right: 20px;
+}
+
+.contact-item div {
+    width: 100%;
+    display: grid;
+    place-items: right;
 }
