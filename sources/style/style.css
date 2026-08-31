@@ -74,7 +74,7 @@ body {
     text-align: center;
     margin-top: -50px;
     background: rgb(255 255 255 / 0.8);
-    padding: 20px;
+    padding: 40px 20px;
     border-radius: 20px;
 }
 
@@ -98,4 +98,122 @@ header {
 
 /*======================= About Section =======================*/
 
+.bold {
+    font-weight: bold;
+}
 
+.main-color {
+    color: var(--main-color);
+}
+
+.underline {
+    border-bottom: 5px solid darkgray;
+}
+
+.about {
+    width: 100%;
+    height: 80vh;
+    text-align: center;
+    margin-top: 30px;
+    border-bottom: 5px solid var(--main-color);
+}
+
+.about-title {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.about-desc {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.about-container {
+    display: grid;
+    place-items: center;
+}
+
+.about-more-container {
+    display: grid;
+    place-items: center;
+}
+
+.about-more-desc {
+    max-width: 1800px;
+    font-size: x-large;
+    margin-bottom: 100px;
+}
+
+.about-more-info {
+    /*max-width: 70%;*/
+    background-color: #f3f3f3;
+    max-width: 1000px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+
+.about-info {
+    width: 40%;
+    padding: 30px;
+    text-align: left;
+}
+
+.about-info-title {
+    font-size: x-large;
+    margin-bottom: 10px;
+}
+
+.about-info-desc {
+    font-size: larger;
+    font-weight: 450;
+}
+
+.about-info-link {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.about-info-link:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    padding: 30px;
+    background: var(--main-color);
+    color: white;
+    text-decoration: none;
+    font-size: xx-large;
+    border-radius: 50px;
+    font-weight: 450;
+    transition: 0.5s all;
+}
+
+.btn:hover {
+    background: #ffff;
+    /*box-shadow: 0px 5px 5px 10px rgb(169 169 169 / 0.2);*/
+    border: 5px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.btn-2 {
+    background-color: #ffffff;
+    padding: 26px;
+    margin: 0 15px 0 15px;
+    font-size: xx-large;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--main-color);
+    border: 5px solid var(--main-color);
+    font-weight: 450;
+    transition: 0.5s all;
+}
+
+.btn-2:hover {
+    background: var(--main-color);
+    color: white;
+    border-color: #00006c;
+}
